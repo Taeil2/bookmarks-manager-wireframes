@@ -1,0 +1,228 @@
+/*------------------
+  Imports and Variables
+------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+/*------------------
+  Global
+------------------*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/*------------------
+  Typography
+------------------*/
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+/*------------------
+  Elements
+------------------*/
+a {
+  text-decoration: none;
+  color: #7E57C2;
+}
+
+button, .btn {
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 15px;
+  background: #7E57C2;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-group button, .btn-group .btn {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: #333;
+}
+
+.btn-group button.active, .btn-group .btn.active {
+  color: #7E57C2;
+  border-bottom: 2px solid #7E57C2;
+}
+
+/*------------------
+  Form
+------------------*/
+label {
+  margin-bottom: 7px;
+}
+
+input {
+  padding: 5px 8px;
+  margin-bottom: 1em;
+  border: 1px solid #333;
+}
+
+/*------------------
+  Layout
+------------------*/
+.wrapper {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+/*------------------
+  Login
+------------------*/
+.login-page .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-page .features {
+  background: #ddd;
+  height: 150px;
+  padding: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-page .features h2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-width: 350px;
+  text-align: center;
+}
+
+.login-page .login-box {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.login-page .login-box label, .login-page .login-box input {
+  display: block;
+}
+
+.login-page .login-box input {
+  width: 100%;
+}
+
+.login-page .login-box .forgot-password-button {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: -10px;
+  margin-bottom: 1em;
+}
+
+.login-page .login-box .btn {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .login-page .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .login-page .wrapper section {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+  .login-page .features {
+    height: 500px;
+  }
+  .login-page .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .login-page .login-box {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+/*------------------
+  Bookmarks
+------------------*/
+.bookmarks-page .wrapper {
+  max-width: 700px;
+  margin-top: 200px;
+}
+
+.bookmarks-page .google-search {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.bookmarks-page .bookmarks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.bookmarks-page .bookmark {
+  width: 80px;
+  margin: 10px 20px;
+}
+
+.bookmarks-page .bookmark .bookmark-image {
+  background: #ccc;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.bookmarks-page .bookmark p {
+  margin-top: 0.3em;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */
