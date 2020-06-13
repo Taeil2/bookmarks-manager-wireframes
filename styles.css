@@ -42,14 +42,25 @@ a {
 
 button, .btn {
   display: inline-block;
+  vertical-align: middle;
   -webkit-appearance: none;
   -moz-appearance: none;
   font-size: 16px;
+  border: 0;
   cursor: pointer;
+  line-height: 1em;
   padding: 8px 15px;
   background: #7E57C2;
+  border: 1px solid #7E57C2;
   color: #fff;
   border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+button.secondary, .btn.secondary {
+  background: none;
+  color: #7E57C2;
 }
 
 .btn-group button, .btn-group .btn {
@@ -64,10 +75,40 @@ button, .btn {
   border-bottom: 2px solid #7E57C2;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid #333;
+  background: #fff;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-shadow: 0px 2px 5px #BDBDBD;
+          box-shadow: 0px 2px 5px #BDBDBD;
+}
+
 /*------------------
   Form
 ------------------*/
 label {
+  display: inline-block;
   margin-bottom: 7px;
 }
 
@@ -186,14 +227,16 @@ input {
   Bookmarks
 ------------------*/
 .bookmarks-page .wrapper {
-  max-width: 700px;
-  margin-top: 200px;
+  max-width: 645px;
+  padding-top: 50px;
 }
 
 .bookmarks-page .google-search {
-  width: calc(100% - 100px);
+  display: block;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
+  font-size: 18px;
 }
 
 .bookmarks-page .bookmarks {
@@ -207,11 +250,15 @@ input {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bookmarks-page .bookmark {
   width: 80px;
   margin: 10px 20px;
+  cursor: pointer;
 }
 
 .bookmarks-page .bookmark .bookmark-image {
@@ -219,10 +266,55 @@ input {
   width: 60px;
   height: 60px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bookmarks-page .bookmark p {
   margin-top: 0.3em;
   text-align: center;
+}
+
+.bookmarks-page .bookmark.add {
+  color: #333;
+}
+
+.bookmarks-page .bookmark.add .bookmark-image {
+  background: #fff;
+  border: 1px solid #ccc;
+  font-size: 24px;
+  color: #9E9E9E;
+}
+
+@media (min-width: 800px) {
+  .bookmarks-page .wrapper {
+    padding-top: 200px;
+  }
+  .bookmarks-page .google-search {
+    width: calc(100% - 100px);
+  }
+}
+
+/*------------------
+  Add Form
+------------------*/
+.modal input {
+  display: block;
+  width: 100%;
+}
+
+.modal .btn-group {
+  margin-bottom: 15px;
+}
+
+.modal .secondary {
+  margin-left: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

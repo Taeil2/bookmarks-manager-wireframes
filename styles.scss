@@ -3,6 +3,7 @@
 ------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 $dark-gray: #333;
+$gray: #BDBDBD;
 $purple: #7E57C2;
 
 
@@ -40,16 +41,27 @@ a {
 }
 button, .btn {
   display: inline-block;
+  vertical-align: middle;
   -webkit-appearance: none;
-    -moz-appearance: none;
-    font-size: 16px;
-    cursor: pointer;
+  -moz-appearance: none;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+  line-height: 1em;
 
-    padding: 8px 15px;
-    background: $purple;
-    color: #fff;
-    border-radius: 5px;
+  padding: 8px 15px;
+  background: $purple;
+  border: 1px solid $purple;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: none;
+
+  &.secondary {
+    background: none;
+    color: $purple;
+  }
 }
+
 .btn-group {
   button, .btn {
     background: none;
@@ -63,11 +75,28 @@ button, .btn {
     }
   }
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid $dark-gray;
+  background: #fff;
+  align-self: center;
+  box-shadow: 0px 2px 5px $gray;
+}
 
 /*------------------
   Form
 ------------------*/
 label {
+  display: inline-block;
   margin-bottom: 7px;
 }
 input {
@@ -161,32 +190,77 @@ input {
 ------------------*/
 .bookmarks-page {
   .wrapper {
-    max-width: 700px;
-    margin-top: 200px;
+    max-width: 645px;
+    padding-top: 50px;
   }
   .google-search {
-    width: calc(100% - 100px);
+    display: block;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 50px;
+    font-size: 18px;
   }
   .bookmarks {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
+    justify-content: center;
   }
   .bookmark {
     width: 80px;
     margin: 10px 20px;
+    cursor: pointer;
     .bookmark-image {
       background: #ccc;
       width: 60px;
       height: 60px;
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     p {
       margin-top: 0.3em;
       text-align: center;
     }
+    &.add {
+      .bookmark-image {
+        background: #fff;
+        border: 1px solid #ccc;
+        font-size: 24px;
+        color: #9E9E9E;
+      }
+      color: #333;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .bookmarks-page {
+    .wrapper {
+      padding-top: 200px;
+    }
+    .google-search {
+      width: calc(100% - 100px);
+    }
+  }
+}
+
+/*------------------
+  Add Form
+------------------*/
+.modal {
+  label {
+  }
+  input {
+    display: block;
+    width: 100%;
+  }
+  .btn-group {
+    margin-bottom: 15px;
+  }
+  .secondary {
+    margin-left: 10px;
   }
 }
